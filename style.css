@@ -297,3 +297,46 @@ ul.regulament-lista li::before {
     background-color: var(--rosu-inchis);
     border-radius: 50%;
 }
+/* --- ADAPTARE PENTRU TELEFON (RESPONSIVE) --- */
+@media (max-width: 768px) {
+    /* Meniul se așează pe verticală */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 15px;
+        text-align: center;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    /* Marginile se micșorează ca să încapă textul */
+    .continut-pagina {
+        margin: 20px 15px;
+        padding: 25px 15px;
+    }
+    
+    /* Titlurile mai mici pe mobil */
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    /* Cardurile și calendarul trec pe un singur rând */
+    .grid-aerisit, .calendar-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* Tabelele capătă scroll orizontal cu degetul */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
